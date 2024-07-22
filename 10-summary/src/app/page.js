@@ -1,4 +1,4 @@
-import MeetupList from "./components/meetups/MeetupList";
+import MeetupList from "../components/meetups/MeetupList";
 
 const DUMMY_MEETUPS = [
   {
@@ -22,3 +22,23 @@ const DUMMY_MEETUPS = [
 export default function Home() {
   return <MeetupList meetups={DUMMY_MEETUPS} />;
 }
+
+// export async function getServerSideProps(context) {
+//   const req = context.req;
+//   const res = context.res;
+
+//   return {
+//     props: {
+//       meetups: DUMMY_MEETUPS,
+//     },
+//   };
+// }
+
+//it won't work in app router
+// export async function getStaticProps() {
+//   //fetch api data
+
+//   return {
+//     props: { meetups: DUMMY_MEETUPS },
+//   };
+// }
