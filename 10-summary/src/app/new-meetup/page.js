@@ -1,9 +1,9 @@
+"use client";
 import NewMeetupForm from "../../components/meetups/NewMeetupForm";
 import { addMeetupHandler } from "../libs/util";
 
 const NewMeetup = async () => {
   const onAddMeetup = async (meetupData) => {
-    "use server";
     try {
       const result = await addMeetupHandler(meetupData);
       console.log(result);
