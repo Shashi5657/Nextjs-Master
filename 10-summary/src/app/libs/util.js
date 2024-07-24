@@ -1,4 +1,4 @@
-'use client'
+"use server";
 export const addMeetupHandler = async (meetupData) => {
   const response = await fetch("/api/new-meetup", {
     method: "POST",

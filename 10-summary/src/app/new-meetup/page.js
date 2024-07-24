@@ -1,12 +1,12 @@
-"use client";
 import NewMeetupForm from "../../components/meetups/NewMeetupForm";
 import { addMeetupHandler } from "../libs/util";
 
 const NewMeetup = async () => {
   const onAddMeetup = async (meetupData) => {
+    "use server";
     try {
       const result = await addMeetupHandler(meetupData);
-      console.log(result);
+      console.log(result, "result from meetup");
       // Handle successful submission (e.g., show a success message or redirect)
     } catch (error) {
       console.error(error);
