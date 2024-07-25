@@ -1,6 +1,7 @@
 import { MongoClient } from "mongodb";
 
 export default async function handler(req, res) {
+
   if (req.method === "POST") {
     const data = req.body;
 
@@ -26,6 +27,7 @@ export default async function handler(req, res) {
 
       res.status(201).json({ message: "Meetup inserted!" });
     } catch (error) {
+      
       res.status(500).json({ message: "Inserting meetup failed!" });
     }
   } else {
